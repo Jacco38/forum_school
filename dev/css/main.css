@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body>nav {
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #efefef;
+    border-color: #e7e7e7;
+    color: #777;
+}
+
+.fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.name {
+    float: left;
+}
+
+.name>a {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.name>a:hover {
+    cursor: pointer;
+}
+
+footer {
+    list-style: none;
+    float: left;
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #efefef;
+    border-color: #e7e7e7;
+    color: #777;
+}
+
+.nav {
+    list-style: none;
+    float: left;
+}
+
+.active {
+    background-color: #dbdbdb;
+}
+
+.nav>li {
+    float: left;
+    height: 50px;
+}
+
+.nav>li:hover {
+    background-color: #dbdbdb;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    padding: 15px 15px;
+}
+
+#menu {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-right: 20px;
+    color: #777;
+    background-color: #efefef;
+    width: 70px;
+    border-radius: 5px;
+}
+
+#menu:hover {
+    height: 50px;
+
+}
+
+#menu>p {
+    margin-left: 6px;
+}
+
+#menu>p:hover {
+    cursor: pointer;
+}
+
+a:link  {
+    color: #777;
+    text-decoration: none
+}
+
+a:visited {
+    color: #777;
+    text-decoration: none
+}
+
+div#content {
+    margin: 50px;
+    border: 1px solid black;
+    background-color: #efefef;
+    border-color: #e7e7e7;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+}
+
+#main {
+    margin: 40px;
+}
+
+body.username {
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #efefef;
+    border-color: #e7e7e7;
+    color: #777;
+}
+
+.username {
+    list-style: none;
+    float: right;
+}
+
+.username>li:hover {
+    background-color: #dbdbdb;
+}
+
+.username>li {
+    float: right;
+    height: 50px;
+}
+
+.username>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    padding: 15px 15px;
+}
+
+.text {
+    margin: 40px;
+}
+
+.thread {
+    margin: 40px;
+}
+
+.thread>p {
+    font-size: 20px;
+    margin-right: 10%;
+}
+
+.thread>a {
+    font-size: 35px;
+}
+
+.reg-form>a {
+    font-size: 35px;
+}
+
+.reg-form {
+    margin: 40px;
+}
+
+.reg-form>input {
+    width: 50px;
+    margin-top: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#input {
+    border-radius: 5px;
+}
+
+#gender, #input, #submit {
+    margin-top: 10px;
+    height: 23px;
+    width: 300px;
+    text-align: center;
+}
+
+.topic {
+    margin: 40px;
+}
+
+.topic>p {
+    font-size: 20px;
+    margin-right: 10%;
+}
+
+.topic>a {
+    font-size: 30px;
+}
+
+.threadtitle {
+    font-size: 35px !important;
+    color: black !important;
+}
+
+a.title:link,a.title:visited {
+    color: black;
+}
+
+.topicuser {
+    font-size: 20px !important;
+}
+
+.replies {
+    margin-left: 40px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    margin-top: 60px;
+}
+
+.repliestitle {
+    font-size: 25px;
+}
+
+.reply {
+    margin-top: 20px;
+}
+
+.reply>a {
+    font-size: 21px;
+}
+
+.replycontent {
+    margin-top: 5px;
+}
+
+.addreply {
+    float: right;
+    margin-right: 40px;
+}
+
+.addreply:link,.addreply:visited {
+    font-size: 20px;
+}
+
+.thread,.topic,.reply {
+    color: #272727 !important;
+}
+
+.title {
+    color: black;
+}
+
+.addtopic {
+    margin: 40px;
+}
+
+.reply_text {
+    width: 500px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.addtopic>input[type="submit"] {
+    margin-top: 20px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+.error {
+    margin: 40px;
+    font-size: 25px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.error>a {
+    color: white;
+    margin: 20px;
+}
+
+.succes {
+    margin: 40px;
+    font-size: 25px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.succes>a {
+    color: white;
+    margin: 20px;
+}
