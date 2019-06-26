@@ -1,31 +1,22 @@
 <?php
-session_start();
-include_once "app/loggedin_check.php";
+include_once 'app/templates/bovenstuk.php';
+$thread_id = $_GET['thread'];
 ?>
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" charset="Jacco Koridon">
-    <title>JkForum - Add Topic</title>
-    <link rel="stylesheet" href="css/main.css">
+<title>JKForum - Add topic</title>
 </head>
-<body>
-<?php
-include_once "app/templates/menu.php";
-?>
-<div id="content">
-    <div class="topic">
-        <a>Add reply</a>
-    </div>
-    <form class="addtopic" method="POST" action="app/addtopic_handler.php">
-        <textarea class="reply_text" name="reply"></textarea><br>
-        <input type="submit" value="Submit">
+<div class="jumbotron">
+    <h2>Add Topic</h2><hr>
+    <form action="app/addtopic_handler.php?thread=<?=$thread_id ?>" method="POST">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="content">Content:</label>
+            <textarea name="content" class="form-control rounded-0"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
-<footer>
-
-</footer>
 </body>
-
 </html>

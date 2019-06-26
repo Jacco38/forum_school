@@ -1,44 +1,38 @@
 <?php
-session_start();
-include_once "app/loggedin_check.php";
+include_once 'app/templates/bovenstuk.php';
 ?>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" charset="Jacco Koridon">
-    <title>JkForum - Register</title>
-    <link rel="stylesheet" href="css/main.css">
+<title>JKForum - Register</title>
 </head>
-<body>
-<?php
-include_once "app/templates/menu.php";
-?>
-<div id="menu">
-    <p>hallo</p>
-</div>
-<div id="content">
+<div class="jumbotron">
+    <h2>Register</h2><hr>
     <?php
-
-        if (isset($_SESSION['error'])) {
-            echo '<div class="error"><a>'.$_SESSION['error'].'</a></div>';
-            unset($_SESSION['error']);
-        }
-
+    if (isset($_SESSION['error'])) {
+        $error = $_SESSION['error'];
+        echo "<div class='alert alert-danger'>
+        <strong>Error!</strong> $error
+        </div>";
+        unset($_SESSION['error']);
+    }
     ?>
-    <div class="reg-form">
-        <a>Register</a>
-        <form method="POST" action="app/register_handler.php">
-            <input id="input" type="email" name="email" placeholder="Email" required><br>
-            <input id="input" type="text" name="username" placeholder="Username" required><br>
-            <input id="input" type="password" name="password" placeholder="Password" required><br>
-            <input id="input" type="password" name="confirm" placeholder="Confirm password" required><br>
-            <input id="submit" type="submit" value="Register">
-        </form>
-    </div>
+    <form action="app/register_handler.php" method="POST">
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" name="username">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Confirm password:</label>
+            <input type="password" class="form-control" name="confirm">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
-<footer>
-
-</footer>
 </body>
-
 </html>

@@ -29,11 +29,12 @@ try {
     }
 
     foreach ($rows as $row) {
-        if ($row['confirmed'] == 1) {
+        if ($row['confirmed'] == 0) {
             $passcheck = password_verify($password, $row['password']);
             if ($passcheck == true) {
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['username'] = $row['username'];
+                $_SESSION['admin'] = $row['admin'];
                 header("Location: ../index.php");
                 exit(0);
             } else {

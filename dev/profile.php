@@ -1,23 +1,25 @@
 <?php
-    session_start();
-    include_once "app/loggedin_check.php";
+include_once 'app/templates/bovenstuk.php';
+$user_id = $_GET['user_id'];
+
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/main.css">
-    <title>JKForum - Profile</title>
+<title>JKForum - Profile</title>
 </head>
 <body>
-<?php
-include_once "app/templates/menu.php";
-?>
-<div id="content">
-    <div class="text">
-        <a>Test</a>
+    <div class="jumbotron">
+        <?php
+
+    // Deze functie zit in 'app/content_functions.php'
+        show_profile();
+
+        ?>
+        </div>
+        <h4>Most recent posts:</h4><br>
+        <?php
+
+    // Deze functie zit in 'app/content_functions.php'
+        show_profile_posts();
+
+        ?>
     </div>
-</div>
-<footer></footer>
 </body>
-</html>

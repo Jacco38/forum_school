@@ -1,34 +1,49 @@
 <?php
+
 if (isset($_SESSION['username']) && isset($_SESSION['user_id'])) {
-    echo '<nav>
-    <div class="fluid">
-        <div class="name">
-            <a href="index.php">JKForum</a>
-        </div>
-        <div class="nav">
-            <li><a href="index.php">Threads</a></li>
-        </div>
-    </div>
-    <div class="username">
-        <li><a href="#">'.$username_menu.'</a></li>
-        <li><a href="profile.php">Profile</a></li>
-        <li><a href="app/logout.php">Logout</a></li>
-    </div>
+    echo '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" style="margin-left:10% !important;" href="index.php">JKForum</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="quotes.php">Quotes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="eeee.php">EEEE</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto" style="margin-right: 10%;">
+        <li class="nav-item">
+            <a class="nav-link" href="app/logout.php">Logout</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="profile.php?user_id='.$_SESSION['user_id'].'">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">'.$username_menu.'</a>
+        </li>
+    </ul>
 </nav>';
-} else if (!isset($_SESSION['username']) && !isset($_SESSION['user_id'])) {
-    echo '<nav>
-    <div class="fluid">
-        <div class="name">
-            <a href="index.php">JKForum</a>
-        </div>
-        <div class="nav">
-            <li><a href="index.php">Threads</a></li>
-        </div>
-    </div>
-    <div class="username">
-        <li><a href="#">'.$username_menu.'</a></li>
-        <li><a href="register.php">Register</a></li>
-        <li><a href="login.php">Login</a></li>
-    </div>
+} else {
+    echo '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" style="margin-left:10% !important;" href="index.php">JKForum</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="quotes.php">Quotes</a>
+        </li>    
+        <li class="nav-item">
+            <a class="nav-link" href="eeee.php">EEEE</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav ml-auto" style="margin-right: 10%;">
+        <li class="nav-item">
+            <a class="nav-link" href="login.php">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="register.php">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link">'.$username_menu.'</a>
+        </li>
+    </ul>
 </nav>';
 }
